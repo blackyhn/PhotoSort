@@ -1,0 +1,13 @@
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\bin\Debug\PhotoSort.exe.config
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\bin\Debug\PhotoSort.exe
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\bin\Debug\PhotoSort.pdb
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.csprojResolveAssemblyReference.cache
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.Form1.resources
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.Properties.Resources.resources
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.csproj.GenerateResource.Cache
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.exe
+c:\users\blacky\documents\visual studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.pdb
+C:\Users\blacky\Documents\Visual Studio 2013\Projects\PhotoSort\PhotoSort\bin\Debug\PhotoSort.exe.manifest
+C:\Users\blacky\Documents\Visual Studio 2013\Projects\PhotoSort\PhotoSort\bin\Debug\PhotoSort.application
+C:\Users\blacky\Documents\Visual Studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.exe.manifest
+C:\Users\blacky\Documents\Visual Studio 2013\Projects\PhotoSort\PhotoSort\obj\Debug\PhotoSort.application
