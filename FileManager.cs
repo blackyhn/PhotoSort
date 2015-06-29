@@ -102,6 +102,19 @@ namespace PhotoSort
             }
         }
 
+        private bool moveFiles = false;
+        public bool MoveFiles
+        {
+            get
+            {
+                return this.moveFiles;
+            }
+            set
+            {
+                this.moveFiles = value;
+            }
+        }
+
         public FileManager () {
             this.mediaList = new List<MediaItem>();
             this.NewFolderName = "[[y]]\\[[m]]\\[[d]]";
@@ -169,7 +182,7 @@ namespace PhotoSort
             return buff;
         }
 
-        public void exportPhotos( Action callback, bool moveFiles = false)
+        public void exportPhotos( Action callback)
         {
             //All checks here
             if (this.PhotoDestinationFolder == "" || !Directory.Exists(this.photoDestinationFolder))
@@ -183,7 +196,7 @@ namespace PhotoSort
             }
             //Prepare filename and copy/move files
             foreach ( MediaItem singleMedia in this.MediaList){
-                this.copySingleImage(singleMedia, moveFiles);
+                this.copySingleImage(singleMedia);
                 callback();
             }
 
@@ -191,7 +204,7 @@ namespace PhotoSort
     	}
 
 
-        private void copySingleImage(MediaItem singleMedia, bool moveFiles)
+        private void copySingleImage(MediaItem singleMedia)
         {
             string oldFileName = singleMedia.FileName;
             string extension = Path.GetExtension(oldFileName);
@@ -214,12 +227,12 @@ namespace PhotoSort
                 if ( oldFileSize != newFileSize && singleMedia.DateTaken != newDateTime){
                     //copy with new name
                     newName = this.findNewName(newName);
-                    this.copyThem(singleMedia.FileName, newName, moveFiles);
+                    this.copyThem(singleMedia.FileName, newName);
                 }
             }
             else
             {
-                this.copyThem(singleMedia.FileName, newName,moveFiles);
+                this.copyThem(singleMedia.FileName, newName);
             }
         }
 
@@ -233,8 +246,8 @@ namespace PhotoSort
                             .Replace("[[s]]", singleMedia.Seconds.ToString());
         }
 
-        private void copyThem(string source, string destination, bool move){
-            if (move){
+        private void copyThem(string source, string destination){
+            if (this.MoveFiles){
                 File.Move(source, destination);
             }
             else

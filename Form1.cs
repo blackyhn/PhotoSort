@@ -63,8 +63,12 @@ namespace PhotoSort
             this.foldersListBox.Items.Clear();
             this.filesLoadedLabel.Text = this.fileManager.MediaList.Count.ToString();
             this.progressBar.Maximum = this.fileManager.MediaList.Count;
-            if (DialogResult.OK == MessageBox.Show(this.fileManager.MediaList.Count.ToString()+" files are loaded.Are you sure?", "Export files", MessageBoxButtons.OKCancel))
-                this.fileManager.exportPhotos(increaseProgress,this.moveFiles.Checked);
+            if (DialogResult.OK == MessageBox.Show(this.fileManager.MediaList.Count.ToString() + " files are loaded.Are you sure?", "Export files", MessageBoxButtons.OKCancel))
+            {
+                this.fileManager.MoveFiles = this.moveFiles.Checked;
+                this.fileManager.exportPhotos(increaseProgress);
+            }
+                
             //foreach (SingleImage node in this.fileManager.ImagesList) { Console.WriteLine(node.DateTaken); }
         }
 
